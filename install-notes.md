@@ -29,3 +29,7 @@ rtcwake: wakeup from "mem" using /dev/rtc0 at Thu Mar 26 12:16:36 2026
 rtcwake: write error    # huhhh
 ```
 lepsie pouzit `-m no`
+
+## Network
+`iwd` je lepsi ako `wpa_supplicant`, treba otestovat
+pouzi `avahi-browse -a` pre service discovery, `__minecraft.host` type shit
