@@ -3,6 +3,7 @@
 skusim systemd-boot
 
 ### TUF A15 quirks
+
 napicu notebook, toto treba aby sa pc nezapinal hned po uspati do options:
 `gpiolib_acpi.ignore_interrupt=AMDI0030:00@8,AMDI0030:00@16`
 keby sa to posralo (aka ako debugovat):
@@ -12,6 +13,7 @@ keby sa to posralo (aka ako debugovat):
 4. profit
 
 ## Suspend
+
 pouzi `rtcwake` (bomba)
 
 manualne:
@@ -31,5 +33,18 @@ rtcwake: write error    # huhhh
 lepsie pouzit `-m no`
 
 ## Network
+
 `iwd` je lepsi ako `wpa_supplicant`, treba otestovat
 pouzi `avahi-browse -a` pre service discovery, `__minecraft.host` type shit
+
+## Apps
+
+### eza (ls replacement)
+```bash
+eza \
+  -1  # oneline \
+  -l  # long \
+  -a  # all, show hidden files \
+  --group-directories-first \
+# --sort modified # not needed, looks default
+```
