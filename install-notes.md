@@ -12,6 +12,19 @@ keby sa to posralo (aka ako debugovat):
 3. `dmesg | grep "GPIO.*active"` — tu budu ciselka
 4. profit
 
+## Secure boot
+
+PK je owner
+KEK su signeri
+db, dbx su keys
+```
+sbctl create-keys
+sbctl enroll-keys --microsoft
+sbctl sign -s /boot/vmlinuz-linux
+sbctl sign -s /boot/EFI/systemd/systemd-bootx64.efi
+```
+`--microsoft` prida MS keys aby Windows isiel
+
 ## Suspend
 
 pouzi `rtcwake` (bomba)
