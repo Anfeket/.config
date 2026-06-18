@@ -22,8 +22,10 @@ sbctl create-keys
 sbctl enroll-keys --microsoft
 sbctl sign -s /boot/vmlinuz-linux
 sbctl sign -s /boot/EFI/systemd/systemd-bootx64.efi
+sbctl verify
 ```
 `--microsoft` prida MS keys aby Windows isiel
+`sbctl sign-all` resigne vsetko naraz, treba raz signut ale
 
 ## Suspend
 
