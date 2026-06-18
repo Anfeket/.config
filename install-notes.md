@@ -63,3 +63,17 @@ eza \
   --group-directories-first \
 # --sort modified # not needed, looks default
 ```
+
+## Filesystem
+
+skusim btrfs zstd:1
+proposed layout:
+```
+/
+/home
+/var/log
+/var/cache/pacman/pkg
+/.snapshots
+/boot
+```
+fstab staci nastavit compress=zstd:1, ostatne defaults su ok
